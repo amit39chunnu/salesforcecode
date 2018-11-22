@@ -1,0 +1,13 @@
+<aura:component >
+    <aura:attribute name="student_name" type="string" />
+    <aura:attribute name="age" type="integer" default="25" />
+    <aura:attribute name="college_name" type="string" />
+    <aura:attribute name="fee" type="decimal" />
+    <div>
+        student name:{!v.student_name} <br/>
+        Age			:{!v.age}<br/>
+        College name:{!v.college_name}<br/>
+        Fee			:{!v.fee}<br/><br/>
+    </div>
+             
+</aura:component>

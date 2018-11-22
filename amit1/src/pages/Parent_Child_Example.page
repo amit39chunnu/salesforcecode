@@ -1,0 +1,20 @@
+<apex:page controller="Parent_Child_Example">
+    <apex:form >
+        <apex:pageBlock title="Account">
+            <apex:pageBlockTable value="{!accounts}" var="a">
+                <apex:column value="{!a.name}" />
+                <apex:column value="{!a.industry}" />
+                <apex:column headerValue="Contacts">
+                    <apex:repeat value="{!a.contacts}" var="b">
+                        {!b.lastname} . {!b.firstname} <br/>
+                    </apex:repeat>
+                </apex:column>
+                <apex:column headerValue="Opportunities">
+                    <apex:repeat value="{!a.opportunities}" var="c">
+                        {!c.name} 
+                    </apex:repeat>
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

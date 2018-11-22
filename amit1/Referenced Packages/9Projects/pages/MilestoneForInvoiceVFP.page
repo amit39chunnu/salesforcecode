@@ -1,0 +1,46 @@
+<apex:page Controller="NineProjects.MilestonesForInvoice" showheader="false"  sidebar="false" >
+<head>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <link rel="stylesheet" href="/resources/demos/style.css" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" />
+ </head>    
+    <script>
+       $(function(){
+        $('.datepicker').datepicker({
+             minDate: 0 
+         }).on('changeDate', function(ev){
+            $('#sDate1').text($('#datepicker').data('date'));
+            $('#datepicker').datepicker('hide');
+        });
+    
+    })
+    </script>
+<apex:form >
+    <apex:pageBlock title="Project's Milestone"> 
+    <apex:pageMessages ></apex:pageMessages>       
+        <apex:pageBlockSection columns="1" >
+            <apex:pageBlockTable value="{!milestonelist}" var="pitem">
+            <apex:column headerValue="Select Milestone">
+            <apex:inputCheckbox value="{!pitem.chkval}"/>
+              </apex:column>
+                <apex:column headerValue="Milestone" value="{!pitem.Milestone.Name}">                 
+                </apex:column>
+                <apex:column headerValue="Description" value="{!pitem.Milestone.NineProjects__Description__c}">
+                </apex:column>
+                <apex:column headerValue="Amount" value="{!pitem.Milestone.NineProjects__Amount__c}">
+                </apex:column>                           
+            </apex:pageBlockTable>
+           
+           
+           <apex:inputText style="width:50%; padding-left:0 !important"  value="{!invoiceComment}" label="Comment" id="com" />
+           <apex:inputText style="width: 7%" id="datepicker" label="Due Date" styleClass="datepicker" value="{!DueDate}" required="true"/>
+           </apex:pageBlockSection>
+          <apex:pageblockButtons >
+         
+           <apex:commandButton value="Generate Invoice" action="{!GenerateInvoice}" />
+           
+          </apex:pageblockButtons>
+    </apex:pageBlock>
+   </apex:form>
+</apex:page>

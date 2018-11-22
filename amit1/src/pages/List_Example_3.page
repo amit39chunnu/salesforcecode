@@ -1,0 +1,36 @@
+<apex:page controller="List_Example_3">
+    <apex:tabpanel >
+    	<apex:tab label="PageBlockTable">
+        	<apex:pageBlock title="PageBlockTable">
+            	<apex:pageBlockTable value="{!names}" var="a">
+                    <apex:column value="{!a}" />
+                    <apex:column value="{!a}" />
+                    <apex:column value="{!a}" />
+                </apex:pageBlockTable>
+            </apex:pageBlock>
+        </apex:tab>
+        <apex:tab label="DataTable">
+        	<apex:pageBlock title="dataTable">
+            	<apex:dataTable value="{!names}" var="a">
+                    <apex:column value="{!a}" />
+                     <apex:column value="{!a}" />
+                     <apex:column value="{!a}" />
+                </apex:dataTable>
+            </apex:pageBlock>
+        </apex:tab>
+        <apex:tab label="DataList">
+        	<apex:pageBlock title="DataList">
+            	<apex:dataList value="{!names}" var="a">
+                	{!a}                    
+                </apex:dataList>
+            </apex:pageBlock>
+        </apex:tab>
+        <apex:tab label="Repeat">
+        	<apex:pageBlock title="Repeat">
+            	<apex:repeat value="{!names}" var="a">
+                	{!a}
+                </apex:repeat>
+            </apex:pageBlock>
+        </apex:tab>
+    </apex:tabpanel>
+</apex:page>

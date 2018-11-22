@@ -1,0 +1,24 @@
+<apex:page controller="ActionSupport_Example" id="page">
+    <apex:form id="fm">
+        <script>
+        	function show(){
+                var name=document.getElementById('page:fm:pb:name').value;
+                var branch=document.getElementById('page:fm:pb:branch').value;
+                if(name!='' && branch!=''){
+                	fun(name,branch);
+                }else{
+                	alert('name and branch are required');
+                }
+            }
+        </script>
+        <apex:actionFunction name="fun" action="{!call}" reRender="res" >
+            <apex:param name="name" assignTo="{!name}" value="" />
+            <apex:param name="branch" assignTo="{!branch}" value="" />
+        </apex:actionFunction>
+    	<apex:pageBlock id="pb">
+            Enter Name : <apex:inputText id="name" onchange="show()"/> <br/><br/>
+            Enter Branch : <apex:inputText id="branch" onchange="show()"/> <br/><br/>
+            Result  :<apex:outputLabel value="{!result}" id="res" />
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

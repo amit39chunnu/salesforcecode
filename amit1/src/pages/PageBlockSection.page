@@ -1,0 +1,27 @@
+<!-- 
+	<apex:pageBlockSection> 
+	1. It is a child component of pageBlock
+	2. It will divide the row into no of columns 
+	3. If you dont mention  no of columns ,by default it will take two columns
+	4. Each component will be displayed in one column of the pageBlockSection
+	5. When we say component ,once we open till we close it is called one component.
+-->
+
+<apex:page >
+    <apex:form >
+        <apex:pageBlock title="Pageblock" tabStyle="Lead">
+   			<apex:pageBlockSection title="Section1" collapsible="false">
+                <apex:outputLabel value="Enter name"/>
+                <apex:inputText />
+                <apex:outputLabel value="Enter age"/>
+                <apex:inputText />
+            </apex:pageBlockSection>  
+            <apex:pageBlockSection title="Section1" collapsible="false" columns="1">
+                <apex:outputLabel value="Enter Name" />
+                <apex:inputText />
+                <apex:outputLabel value="Enter Age" />
+                <apex:inputText />
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,7 @@
+<aura:component >
+	<div class="block">
+        Name : Amit kumar<br/>
+        Phone: 9798665208<br/>
+        Age	 : 25<br/>
+    </div>
+</aura:component>

@@ -1,0 +1,7 @@
+<aura:component >
+	<div>
+        Name: 	Amit kumar<br/><br/>
+        Phone: 	9798665208<br/><br/>
+        age:	25
+    </div>
+</aura:component>

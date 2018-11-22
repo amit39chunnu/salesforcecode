@@ -1,0 +1,24 @@
+<apex:page id="page">
+    <script>
+    	function call(){
+        	var name=document.getElementById('page:fm:name').value;
+            alert('Name :'+name);
+        }
+    	function show(){
+        	var age =document.getElementById('page:fm:pb:pbs:pbsi:age').value;
+            alert(age);
+        }
+    </script>
+    <apex:form id="fm">
+        Enter Name : <apex:inputText id="name" onchange="call()"/> <br/><br/>
+        <apex:pageBlock title="Example" id="pb">
+        	<apex:pageBlockSection id="pbs">
+            	<apex:pageBlockSectionItem id="pbsi">
+                    <apex:outputLabel value="Enter Age" />
+                    <apex:inputText id="age"  onchange="show()"/>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+        
+    </apex:form>
+</apex:page>

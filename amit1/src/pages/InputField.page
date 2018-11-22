@@ -1,0 +1,32 @@
+<!-- 
+<apex:inputField> 
+1. This is used to reffer to the fields of given sobject.
+2. InputField will respect the properties of the given field
+
+<Apex:inputText >
+1. This is used to reffer to  a fields or a variable of a class .
+2. This will not respect the properties of a given field
+-->
+<apex:page standardController="Lead" >
+    <apex:sectionHeader title="Lead" subtitle="New Lead"/>
+    <apex:form >
+        <apex:pageBlock title="Lead">
+            <apex:pageBlockSection title="Lead Information" collapsible="false">
+                <apex:inputField value="{!Lead.LastName}" />
+                <apex:inputField value="{!Lead.company}" />
+                <apex:inputField value="{!Lead.FirstName}" />
+                <apex:inputField value="{!Lead.Phone}" />
+                <apex:inputField value="{!Lead.Industry}" />
+                <apex:inputField value="{!Lead.rating}" />
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="Lead InputText" collapsible="false">
+                <apex:inputText value="{!Lead.LastName}" />
+                <apex:inputText value="{!Lead.company}" />
+                <apex:inputText value="{!Lead.FirstName}" />
+                <apex:inputText value="{!Lead.Phone}" />
+                <apex:inputText value="{!Lead.Industry}" />
+                <apex:inputText value="{!Lead.rating}" />
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

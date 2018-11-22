@@ -1,0 +1,21 @@
+<apex:page id="page">
+    <script src="/soap/ajax/42.0/connection.js" type="text/javascript">
+    </script>
+    <script>
+    	var searchtext=document.getElementById('page:fm:search').value;
+    	sforce.connection.sessionId='{!GETSESSIONID()}';
+    	var query='select name from Account where industry=\''+searchtext'\'';
+    	var queryresult=sforce.connection.query(query);
+    	var result=queryresult.getArray(result);
+    	var name='';
+        for(var i=0;i<result.length;i++){
+        	name=name+'<br/>'+result[i].name;
+    	}
+    	document.getElementById('page:fm:res').innerHTML=name;
+    </script>
+    <apex:form id="fm">
+    	<apex:inputText id="search"/>
+        <apex:commandButton value="Search" onclick="show()"/>
+        <apex:outputLabel id="res"/>
+    </apex:form>
+</apex:page>

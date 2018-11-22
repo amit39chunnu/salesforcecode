@@ -1,0 +1,22 @@
+<apex:page id="page">
+    <script src="/soap/ajax/42.0/connection.js" type="text/javascript">
+    </script>
+    <script>
+        function show(){
+            sforce.connection.sessionId='{!GETSESSIONID()}';
+            var query='select id,name,phone from Account';
+            var queryResult=sforce.connection.query(query);
+            var records =queryResult.getArray('records');
+            var names='';
+            for(var i=0;i<records.length;i++){
+                names=names+'<br/>'+records[i].Name;
+            }
+            document.getElementById('page:fm:res').innerHTML=names;
+         }
+    </script>
+    <apex:form id="fm">
+        <apex:inputText id="searchtext"/>
+        <apex:commandButton value="Submit" oncomplete="show()" /> 
+        <apex:outputLabel id="res" />
+    </apex:form>
+</apex:page>

@@ -1,0 +1,5 @@
+<aura:component controller="GraphController" implements="flexipage:availableForAllPageTypes" access="global">
+    <ltng:require scripts="{!$Resource.chart}" afterScriptsLoaded="{!c.ctr}" />
+    <canvas aura:id="barChart" height="50" width="50" id="barChart"></canvas>
+    <canvas aura:id="lineChart" height="50" width="50" id="lineChart"></canvas>
+</aura:component>

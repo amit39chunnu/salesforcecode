@@ -1,0 +1,51 @@
+<!--
+<apex:pageBlockButtons>
+1. This is a child component of pageBlock.
+2. It is used to create header and fotter of pageBlock.
+3. What ever we define in the pageBlockButtons are displayed on header and footer of pageblock
+4. Attributes 
+	a. Location		:
+	   1. This will specify the location where buttons should be displayed 
+	   2. Possible values are bottom, top
+	b. dir 			: 
+		1. This will specify the direction of the elements 
+		2. Possible values are RTL/LTR
+-->
+<apex:page >
+    <apex:form >
+    	<apex:pageBlock title="Example">
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Save"/>    <!-- If the commandBotton inside the pageBlockButton then Button will be on the header or footer of the pageblock-->
+            	<apex:commandButton value="Cancel"/>
+            </apex:pageBlockButtons>            
+            This is line one<br/>
+            This is line two<br/>
+            This is line three<br/>          
+        </apex:pageBlock>
+        <apex:pageBlock title="Example">
+            <apex:pageBlockButtons location="top">
+                <apex:commandButton value="Save"/>
+                <apex:commandButton value="Cancel"/>
+            </apex:pageBlockButtons>
+            This is line one<br/>
+            This is line two <br/>
+            This is line three
+        </apex:pageBlock>
+         <apex:pageBlock title="Example">
+             <apex:pageBlockButtons location="bottom">
+                 <apex:commandButton value="Save"/>
+                 <apex:commandButton value="Cancel"/>
+             </apex:pageBlockButtons>
+             This is line one<br/>
+             This is line two<br/>
+             This is line three
+         </apex:pageBlock>        
+        <apex:pageBlock title="Example">
+            <apex:commandButton value="Submit"/> <!-- If the commandButton is inside the pageBlock then button will be inside the pageblock-->
+            <apex:pageBlockButtons dir="RTL">
+                <apex:commandButton value="Save"/>
+                <apex:commandButton value="Cancel"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

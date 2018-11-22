@@ -1,0 +1,10 @@
+<aura:component controller="Interest_calculator">
+    <div class="block">
+        <lightning:input label="Enter amount" aura:id="amount" />
+        <lightning:input label="Enter rates" aura:id="rates"/>
+        <lightning:input label="Enter years" aura:id="years"/>
+        <lightning:input label="interest" aura:id="interest"/>
+        <lightning:buttonIcon iconName="utility:call" alternativeText="Icon loaded" onclick="c.invoke"/>
+    </div>
+	
+</aura:component>

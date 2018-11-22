@@ -1,0 +1,19 @@
+<apex:page id="page">
+    <script src="/soap/ajax/42.0/connection.js" type="text/javascript">
+    </script>
+    <script>
+        sforce.connection.sessionId='{! GETSESSIONID()}';
+        function show(){
+            var acc=new sforce.SObject('Account');
+            acc.name='ajax1';
+            acc.phone='12345';
+            var mylist=[acc];
+            var result=sforce.connection.create(mylist);
+            document.getElementById('page:fm:o').innerHTML=result;
+        }
+    </script>
+    <apex:form id="fm">
+        <apex:commandButton value="Save" onclick="show()"/>
+        <apex:outputLabel id="o"/>
+    </apex:form>
+</apex:page>

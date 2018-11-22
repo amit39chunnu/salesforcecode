@@ -1,0 +1,11 @@
+<apex:page controller="Insert_List_Cont_onAcc">
+    <apex:form >
+    	<apex:pageBlock >
+        	<apex:pageBlockTable value="{!con}" var="a">
+            	<apex:column headerValue="AAAA">
+                	<apex:inputText value="{!a.lastname}"/>
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

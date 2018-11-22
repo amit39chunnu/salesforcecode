@@ -1,0 +1,12 @@
+<apex:page controller="community_user_class">
+    <apex:form >
+    	<apex:pageBlock >
+        	<apex:pageBlockTable value="{!users}" var="a">
+            	<apex:column value="{!a.name}" headerValue="Community User"/>
+                <apex:column headerValue="Login" >
+                	<apex:commandButton action="{!login}" value="Login"/>
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

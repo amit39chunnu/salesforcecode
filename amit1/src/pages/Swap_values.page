@@ -1,0 +1,16 @@
+<apex:page id="page" controller="swap_values">
+    <script>
+    	function swap(){
+        	var temp=document.getElementById('page:pb:fm:aval').value;
+            document.getElementById('page:pb:fm:aval').value=document.getElementById('page:pb:fm:bval').value;
+            document.getElementById('page:pb:fm:bval').value = temp;
+        }
+    </script>
+    <apex:pageBlock title="pageblock" id="pb">
+    	<apex:form id="fm">
+            <apex:inputText id="aval" value="{!a}" />
+            <apex:inputText id="bval" value="{!b}"/>
+            <apex:commandButton value="swap" onclick="swap"/>
+        </apex:form>
+    </apex:pageBlock>
+</apex:page>

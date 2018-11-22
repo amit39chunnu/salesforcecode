@@ -1,0 +1,7 @@
+<aura:component >
+	<div>
+        City:	hyderabad<br/><br/>
+        Place:	Bhoiguda<br/><br/>
+        State:	Telangana<br/><br/>
+    </div>
+</aura:component>

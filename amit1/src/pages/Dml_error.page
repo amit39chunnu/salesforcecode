@@ -1,0 +1,29 @@
+<apex:page controller="Dml_error">
+   	<apex:sectionHeader title="Account Section Header" subtitle="New Account"/>
+    <apex:form >
+        <apex:pageMessages />
+        <apex:pageBlock title="Account pageblock">
+            <apex:pageBlockButtons location="Top" >
+                	<apex:commandButton value="Save" action="{!create}"/>
+                </apex:pageBlockButtons>
+            <apex:pageBlockSection >                
+            	<apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Account Name" />
+                    <apex:inputText value="{!accname}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Phone" />
+                    <apex:inputText value="{!phone}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Rating" />
+                    <apex:inputText value="{!rating}"/>                    
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Ownership" />
+                    <apex:inputText value="{!ownership}"/>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

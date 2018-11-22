@@ -1,0 +1,5 @@
+<apex:component access="global" controller="DatetimeInTimezoneController">{!FormattedDatetime}
+<apex:attribute assignTo="{!date_time }" description="The DateTime value to be rendered" name="date_time_value" type="DateTime"></apex:attribute>
+<apex:attribute assignTo="{!timezone}" description="The optional format to use for the DateTime value to be rendered" name="timezone_value" type="String"></apex:attribute>
+<apex:attribute assignTo="{!translationLanguage}" description="Translation Language" name="translationLanguage_Value" type="String"></apex:attribute> 
+</apex:component>

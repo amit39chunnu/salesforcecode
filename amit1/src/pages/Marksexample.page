@@ -1,0 +1,25 @@
+<apex:page controller="Marksexample" >
+    <apex:sectionheader title="My marklist" subtitle="Sivaprasad"/>
+    <apex:form id="one">
+        <apex:pageblock title="My own" >
+            <apex:pageBlockButtons location="top">
+                <apex:commandButton value="Result" rerender="one" action="{!add}" />     
+            </apex:pageBlockButtons>
+            <apex:pageblocksection columns="1">
+                 <apex:pageblocksectionitem >
+                     <apex:outputLabel value="Enter marks" />
+                     <apex:inputText value="{!Entermarks}" /> 
+                     </apex:pageblocksectionitem>
+                <apex:pageblocksectionitem >
+            <apex:outputlabel value="total marks"/>
+                    <apex:inputtext value="{!totalmarks}"/>
+            </apex:pageblocksectionitem>
+                <apex:pageblocksectionitem >
+                    <apex:outputlabel value="Percent" rendered="{! !ISNULL(percent)}" />
+                    <apex:outputtext value="{!percent}" />
+                </apex:pageblocksectionitem>
+            </apex:pageblocksection>
+        </apex:pageblock>
+    </apex:form>
+
+</apex:page>

@@ -1,0 +1,12 @@
+<apex:page controller="ViewState_Exampl">
+    <apex:form >
+        <apex:commandButton value="Show" action="{!call}" />
+        <apex:pageBlock title="View State">
+        	<apex:pageBlockTable value="{!accs}" var="a">
+                <apex:column value="{!a.name}" />
+                <apex:column value="{!a.phone}" />
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+        {!name} ---{!age}
+    </apex:form>
+</apex:page>

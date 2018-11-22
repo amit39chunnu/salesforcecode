@@ -1,0 +1,19 @@
+<apex:page controller="Input_Example_2">
+    <apex:sectionHeader title="Calculator" subTitle="Example" />
+    <apex:form >
+    	<apex:pageBlock title="Calculator" id="pb">
+            <apex:pageBlockButtons location="top">
+                <!-- if we are invoking any apex class method with in the VF page 
+					 1. Method should not contain parameters 
+					 2. Method should not have any return type other than void or pageReferece 
+				-->
+            	<apex:commandButton value="Add" action="{!add}" reRender="pb"/>
+            	<apex:commandButton value="Mul" action="{!mul}" reRender="pb"/>
+            	<apex:commandButton value="Reset" action="{!reset}" reRender="pb"/>
+            </apex:pageBlockButtons>
+            <apex:outputLabel value="AVal" /> 	:<apex:inputText value="{!aval}" /> <br/><br/>
+            <apex:outputLabel value="BVal" />   :<apex:inputText value="{!bval}" /> <br/><br/>
+            <apex:outputLabel value="Result" />  	:<apex:inputText value="{!result}" />
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

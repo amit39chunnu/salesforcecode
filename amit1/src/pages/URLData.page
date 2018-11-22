@@ -1,0 +1,18 @@
+<!--
+https://ap5.salesforce.com/apex/PageName
+
+https://ap5.salesforce.com/apex/pageName?param=value
+
+https://ap5.salesforce.com/apex/pageName?Name=Satish Myla
+
+https://ap5.salesforce.com/apex/pageName?Name=SatishMyla&age=33
+
+https://ap5.salesforce.com/apex/pageName?name=satishmyla&age=33&qual=Phd
+
+How to read the data from the url 
+{! $Currentpage.parameters.parametername}
+-->
+<apex:page >
+    Name : {! $Currentpage.parameters.name } <br/><br/>
+    Phone :{! $Currentpage.parameters.phone}
+</apex:page>

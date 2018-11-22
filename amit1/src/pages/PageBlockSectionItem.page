@@ -1,0 +1,23 @@
+<!--
+<apex:pageBlockSectionItem> 
+1. It is a child component of pageBlockSection
+2. It can contain two child components in it .
+3. It will be displayed in one column of pageBlockSection
+
+-->
+<apex:page >
+    <apex:form >
+        <apex:pageBlock title="Pageblock">
+            <apex:pageBlockSection title="Section" columns="1">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Enter Name" />
+                    <apex:inputText />
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Enter Age" />
+                    <apex:inputText />
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

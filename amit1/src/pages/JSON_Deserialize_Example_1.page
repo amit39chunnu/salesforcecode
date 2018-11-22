@@ -1,0 +1,16 @@
+<apex:page controller="JSON_Deserialize_Example_1">
+    Integer :{!age} <br/><br/>
+    Student :{!sw}<br/><br/>
+    LastName :{!sw.lastName}<br/><br/>
+    FirstName:{!sw.firstName}<br/><br/>
+    Phone :{!sw.phone}<br/><br/>
+    Account :<br/><br/>
+    Name :{!acc.Name}<br/><br/>
+    <apex:pageBlock title="UnTyped">
+    	<apex:pageBlockTable value="{!resMap}" var="a">
+            <apex:column value="{!a}" />
+            <apex:column value="{!resMap[a]}" />
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+    
+</apex:page>

@@ -1,0 +1,30 @@
+<apex:page id="page">
+    <script src="/soap/ajax/42.0/connection.js" type="text/javascript">
+    </script>
+    <script>
+    	function show(){
+        	sforce.connection.sessionId='{!GETSESSIONID()}';
+            var value=document.getElementById('page:fm:pb:indus').value;
+            var query="select id,name,rating from Account where industry='"+value+"'";
+            var queryResult=sforce.connection.query(query);
+            var records=queryResult.getArray('records');
+            var acc=[];
+            for(var i=0;i<records[i].length;i++){
+            	var a=new sforce.SObject('Account');
+                a.Id=records[i].Id;
+                a.rating='Hot';
+                acc[i]=a;
+            }
+            var result=sforce.connection.update(acc);
+            document.getElementById('page:fm:pb:res').innerHTML=result;
+        }
+    </script>
+    <apex:form id="fm">
+    	<apex:pageBlock title="Update" id="pb">
+            <apex:inputText id="indus" /> 
+            <apex:commandButton value="Update" oncomplete="show()" />
+            <apex:outputLabel id="res" />
+        </apex:pageBlock>
+    
+    </apex:form>
+</apex:page>

@@ -1,0 +1,4 @@
+<apex:page controller="Apex_Messages_Example">
+    <!-- <apex:pageMessages /> : This will be used to print the messages generated in the Apex class -->
+    <apex:pageMessages />
+</apex:page>

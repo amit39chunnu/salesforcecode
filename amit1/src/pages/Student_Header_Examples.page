@@ -1,0 +1,6 @@
+<apex:page >
+    <apex:sectionHeader title="Student" subtitle="New Student" help="/apex/student" rendered="true" />
+    This is page one<br/>
+    This is page two<br/>
+    This is page three
+</apex:page>

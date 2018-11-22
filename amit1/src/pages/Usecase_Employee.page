@@ -1,0 +1,11 @@
+<apex:page controller="usecase_Employee">
+    <apex:sectionHeader title="Employee" subtitle="New Employee" help="/apex/page"/>
+    <apex:pageBlock title="Employee" helpTitle="need help??" helpUrl="/apex/page">
+    </apex:pageBlock>
+    <apex:form >
+        <apex:commandButton value="Submit" action="{!submit}" style="width:200px"/>
+         {!name}
+         {!phone}
+    </apex:form>
+    
+</apex:page>

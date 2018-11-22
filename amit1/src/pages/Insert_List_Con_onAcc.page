@@ -1,0 +1,29 @@
+<apex:page controller="Insert_List_Cont_onAcc" >
+    <apex:form >
+    	<apex:pageBlock title="Account">
+            <apex:pageBlockButtons location="top">
+            	<apex:commandButton value="Save" action="{!save}"/>
+            </apex:pageBlockButtons>
+        	<apex:pageBlockSection >
+               <apex:inputField value="{!acc.name}" />
+               <apex:inputField value="{!acc.phone}" />
+                <apex:inputField value="{!acc.rating}" />
+                <apex:inputField value="{!acc.ownership}" />
+            </apex:pageBlockSection>
+            <apex:pageBlockTable value="{!con}" var="a">                
+            	<apex:column headerValue="LastName">
+                	<apex:inputText value="{!a.lastname}"/>
+                </apex:column>
+                <apex:column headerValue="FirstName">
+                	<apex:inputText value="{!a.firstname}"/>
+                </apex:column>
+                <apex:column headerValue="Phone">
+                	<apex:inputText value="{!a.phone}"/>
+                </apex:column>
+                <apex:column headerValue="Add">
+                	<apex:commandButton value="add" action="{!add}"/> 
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

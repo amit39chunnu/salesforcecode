@@ -1,0 +1,11 @@
+<apex:page controller="Action_Example_4">
+    <apex:form >
+        Enter Name : <apex:inputText value="{!name}" /> <br/><br/>
+        <apex:actionRegion >
+        Enter Branch:<apex:inputText value="{!branch}">
+        				<apex:actionSupport event="onchange" action="{!call}" reRender="res" />
+        </apex:inputText> <br/><br/>
+        </apex:actionRegion>
+        <apex:outputLabel value="{!result}" id="res" />
+    </apex:form>
+</apex:page>

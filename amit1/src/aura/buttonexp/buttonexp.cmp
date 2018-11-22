@@ -1,0 +1,11 @@
+<aura:component >
+    <lightning:button label="button1" title="simple button" />
+    <lightning:button label="base" title="base button" variant='base'/>
+    <lightning:button label="nuetral" title="neutral button" variant="neutral" />
+    <lightning:button label="inverse" title="simple button" variant="inverse" />
+    <lightning:button label="destructive" title="destructive button" variant="destructive" />
+    <lightning:button label="success" title="success button" variant="success" />
+    <lightning:button label="cancel" title="standard button" iconName="standard:account" />
+    <lightning:button label="submit" title="utlity button" iconName="utility:down" iconPosition="right" />
+    
+</aura:component>

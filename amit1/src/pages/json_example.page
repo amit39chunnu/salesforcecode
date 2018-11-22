@@ -1,0 +1,3 @@
+<apex:page controller="json_example">
+    {!accresult}
+</apex:page>

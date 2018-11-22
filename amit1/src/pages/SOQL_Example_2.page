@@ -1,0 +1,18 @@
+<apex:page controller="SOQL_Example_2">
+    <apex:form >
+    	<apex:pageBlock title="Accounts" id="pb">
+            <apex:pageBlockButtons location="top">
+                <apex:commandButton value="nameDesc" action="{!nameDesc}" reRender="pb" />
+                <apex:commandButton value="nameAscPhoneDesc" action="{!nameAscPhoneDesc}" reRender="pb"/>
+                <apex:commandButton value="lastFive" action="{!lastFive}" reRender="pb" />
+            </apex:pageBlockButtons>
+        	<apex:pageBlockTable value="{!accounts}" var="a">
+                <apex:column value="{!a.name}" />
+                <apex:column value="{!a.industry}" />
+                <apex:column value="{!a.rating}" />
+                <apex:column value="{!a.phone}" />
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    	
+    </apex:form>
+</apex:page>

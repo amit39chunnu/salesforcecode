@@ -1,0 +1,19 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" >
+	<div class="slds">
+		<table class="slds-table slds-table--bordered slds-table--striped">
+ 			<thead>
+ 				<tr>
+ 					<th scope="col"><span class="slds-truncate">Community Users</span></th>
+					<th scope="col"><span class="slds=truncate">Login</span></th>
+ 				</tr>
+ 			</thead>
+ 			<tbody>
+ 				<aura:iteration items="{!v.Accounts}" var="account">
+ 					<tr>
+ 						<td> {!account.Name}</td> 
+ 					</tr>
+ 				</aura:iteration>
+ 			</tbody>
+ 		</table>
+ 	</div>
+</aura:component>

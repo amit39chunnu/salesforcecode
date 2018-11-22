@@ -1,0 +1,17 @@
+<apex:page controller="List_Example_1">
+    <apex:form >
+    	<apex:pageBlock title="List Example">
+        	<apex:pageBlockTable value="{!accounts}" var="a">
+                <apex:column >
+                	<apex:facet name="header">
+                        <apex:inputCheckBox />
+                    </apex:facet>
+                    <apex:inputCheckBox />
+                </apex:column>
+                <apex:column value="{!a.name}" headerValue="Name"/>
+                <apex:column value="{!a.phone}"/>
+                <apex:column value="{!a.industry}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

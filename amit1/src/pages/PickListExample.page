@@ -1,0 +1,25 @@
+<apex:page controller="PickListExample" >
+    <apex:form >
+        City : <apex:selectList size="1" value="{!selected}">
+            	<apex:selectOption itemLabel="-None-" itemValue="none"/>
+            	<apex:selectOption itemLabel="HYD" itemValue="TN"/>
+            	<apex:selectOption itemLabel="BAN" itemValue="KA"/>
+            	<apex:selectOption itemLabel="CHE" itemValue="TN"/>            
+        	  </apex:selectList>
+        <apex:commandButton value="Submit" action="{!call}"/>
+            {!result}
+        <br/><br/>
+        City  : <apex:selectRadio >
+        			<apex:selectOption itemLabel="-None-" itemValue="none" />
+        			<apex:selectOption itemLabel="Hyd" itemValue="TG" />
+        			<apex:selectOption itemLabel="Ban" itemValue="KA" />
+        			<apex:selectOption itemLabel="Che" itemValue="TN" />
+        		</apex:selectRadio>
+        <br/><br/>
+        City : <apex:selectCheckboxes >
+        			<apex:selectOption itemLabel="Hyd" itemValue="TG" />
+        			<apex:selectOption itemLabel="Ban" itemValue="KA" />
+        			<apex:selectOption itemLabel="Che" itemValue="TN" />
+               </apex:selectCheckboxes>
+    </apex:form>
+</apex:page>

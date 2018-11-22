@@ -1,0 +1,17 @@
+<apex:page standardController="Account" extensions="Account_Delete">
+    <apex:form >
+    	<apex:pageBlock title="Account">
+            <apex:pageBlockButtons location="top">
+                <apex:commandButton value="Delete" action="{!show}" />
+            </apex:pageBlockButtons>
+        	<apex:pageBlockSection >
+                <apex:inputField value="{!acc.Name}" />
+                <apex:inputField value="{!acc.Phone}" />
+            </apex:pageBlockSection>
+            <apex:pageBlockTable value="{!contacts}" var="a">
+                <apex:column value="{!a.lastname}" />
+                <apex:column value="{!a.firstname}" />
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

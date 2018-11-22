@@ -1,0 +1,13 @@
+<aura:component >
+    <aura:attribute name="name" type="String" />
+    <aura:attribute name="price" type="Decimal" />
+    <aura:attribute name="quant" type="Decimal" />
+    <aura:attribute name="total" type="Decimal" />
+    <aura:handler name="init" value="{!this}" action="{!c.calc}" />
+    <div class="block">
+        Name:		{!v.name}<br/>
+        Price:		{!v.price}<br/>
+        Quantity:	{!v.quant}<br/>
+        Total:		{!v.total}
+    </div>
+</aura:component>

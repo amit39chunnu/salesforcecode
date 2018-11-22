@@ -1,0 +1,14 @@
+<aura:component >
+    <aura:attribute name="amount" type="Decimal" required="true" />
+    <aura:attribute name="year" type="Integer" required="true" />
+    <aura:attribute name="rate" type="Decimal" required="true" />
+    <aura:attribute name="interest" type="Decimal" />
+    <lightning:button label="calculate" onclick="{!c.calc}" />
+    <lightning:button label="Reset" onclick="{!c.reset}" />
+    <div>
+        Amount	: {!v.amount}<br/><br/>
+        Year	: {!v.year}<br/><br/>
+        Rate	: {!v.rate}<br/><br/>
+        Interest: {!v.interest}<br/><br/>
+    </div>
+</aura:component>

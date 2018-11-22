@@ -1,0 +1,92 @@
+<apex:page controller="NineProjects.RegenerateInvoiceController" renderAs="pdf" applyBodyTag="false" docType="html-5.0" showHeader="false" standardStylesheets="false">
+
+<head>
+                <style type="text/css" media="print">
+                       @page {
+                                 @top-center {
+                                       content: element(header);
+                               }
+                               @bottom-left {
+                                     content: element(footer);
+                               }
+                            }
+                                     div.header {
+                                      padding: 10px;
+                                      position: running(header);
+                                     
+                           }
+                       div.footer {
+                                display: block;
+                             padding: 5px;
+                               position: running(footer);
+                      }
+                                     .pagenumber:before {
+                                        content: counter(page);
+                       }
+                                   .pagecount:before {
+                             content: counter(pages);
+                        }
+                    </style>
+              </head>
+<div class="header" >
+
+<div style="color:#9D9D9D;font-family: Arial,Helvetica Neue,Helvetica,sans-serif; font-size:small;"> 
+
+            <center> <h1> <B> Invoice </B></h1> </center> </div>
+             
+           </div>
+           <div class="footer">
+                <div>Page <span class="pagenumber"/> of <span class="pagecount"/>   </div>
+          </div>
+          <br/><br/>
+          <div class="content">
+               
+ <div style="float:right">
+    
+ </div>         
+<p align="left"><strong>Invoice To:</strong></p>
+<p align="left">{!INV.ProjectId__r.ClientName__c}<br/>
+<apex:outputText value="{! INV.ProjectId__r.City__c}"/><br/>
+{!INV.ProjectId__r.NineProjects__Country__c}<br/> Email: {!INV.ProjectId__r.NineProjects__ClientEmail__c}<br/> Mobile: {!INV.ProjectId__r.NineProjects__Phone__c}<br/>
+</p>
+
+<p align="right"><strong>Invoice From:</strong> </p>
+<p align="right" style="width:200px;float:right">{!$Organization.Name} {!$Organization.Street} {!$Organization.City} {!$Organization.State} {!$Organization.PostalCode} {!$Organization.Country}<br/>
+</p>
+<p><strong>Invoice Number :</strong> {!INV.name}</p>
+<p><strong>Invoice Date :</strong> 
+<apex:outputText value="{0,date,MM/dd/yy}"> <apex:param value="{!INV.CreatedDate}" /> </apex:outputText> </p>
+
+<!-- OUTPUT INVOICE COMMENT, IF ANY  -->
+
+<apex:outputpanel rendered="{! NOT(ISBLANK(INV.name))}">
+<p><strong>Comment:</strong> {!INV.NineProjects__Comment__c}</p>
+</apex:outputpanel>
+
+
+<!-- OUTPUT ORDERED ITEMS TABLE -->
+<apex:pageblock id="INV" title="Service Information :"> 
+<apex:pageblocksection >
+<apex:pageblockTable value="{!InvoiceLineItem}" var="m" columnsWidth="40%,30%,30%,30%">
+    
+        <apex:column value="{!m.MileStoneId__r.Name}"/>
+        
+        
+        <apex:column value="{!m.NineProjects__MilestoneHours__c}"/>
+        
+        <apex:column value="{!m.NineProjects__UnitPrice__c}"/> 
+        
+        <apex:column value="{!m.NineProjects__TotalPrice__c}"/>         
+
+    </apex:pageblockTable> 
+
+</apex:pageblocksection>
+ </apex:pageblock>
+ <palign="right"><strong>Discount:</strong> {!INV.Discount__c}</p>
+<palign="right"><strong>Total:</strong> {!INV.TotalAmount1__c}</p>
+
+<apex:outputField value="{!INV.NineProjects__TermAndConditions__c}" rendered="{!Terms == ''}"/>
+<p><strong><em>Thank you!</em></strong>
+</p>
+</div>
+</apex:page>

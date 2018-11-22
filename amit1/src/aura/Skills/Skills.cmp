@@ -1,0 +1,45 @@
+<aura:component implements="force:appHostable" controller="skill" access="global">
+    <aura:attribute name="skill" type="Skills__c" default="{ 'sobjectType': 'Skills__c'}"/>
+     
+    <div class="slds-grid">
+        <lightning:card title="Skills Details" footer="Click on Save button to create new skills details.">
+            <!-- Save button -->
+            <aura:set attribute="actions">
+                <lightning:button aura:id="saveId"
+                                  label="Save"   
+                                  onclick="{!c.doSave}"/>
+            </aura:set>
+            <!--/ Save button -->
+            
+            <!-- Body -->
+            <p class="slds-p-horizontal_small">
+                <lightning:input aura:id="skill1"
+                                 label="Enter Technical 1"
+                                 type="String"                                
+                                 value="{!v.skill.Enter_Technical_Skill1__c}"/>
+                 <lightning:input aura:id="skill2"
+                                 label="Enter Technical 2"
+                                 type="String"                                 
+                                 value="{!v.skill.Enter_Technical_Skill2__c}"/>
+                 <lightning:input aura:id="skill3"
+                                 label="Enter Technical 3"
+                                 type="String"
+                                 value="{!v.skill.Enter_Technical_Skill3__c}"/>
+                 <lightning:input aura:id="skill1"
+                                 label="Enter Other Skill 1"
+                                 type="String"                                 
+                                 value="{!v.skill.Enter_Other_Skill1__c}"/>
+                 <lightning:input aura:id="skill1"
+                                 label="Enter Other Skill 2"
+                                 type="String"                                 
+                                 value="{!v.skill.Enter_Other_Skill2__c}"/>
+                <lightning:input aura:id="skill3"
+                                 label="Enter Other Skill 3"
+                                 type="String"                                 
+                                 value="{!v.skill.Enter_Other_Skill3__c}"/>
+            </p>
+            <!--/ Body -->
+        </lightning:card>
+    </div>
+    
+</aura:component>

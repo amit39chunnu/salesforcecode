@@ -1,0 +1,9 @@
+<apex:page controller="Button_URL_Data">
+    <apex:form >
+        <apex:commandButton value="Submit" action="{!callMe}"/> <br/><br/>
+        Name:{!name}<br/><br/>
+        Phone:{!phone}
+    </apex:form>
+    
+</apex:page>
+<!-- give the name=amit kumar&phone=1234  after ? in url then click button-->

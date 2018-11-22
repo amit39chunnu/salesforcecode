@@ -1,0 +1,16 @@
+<apex:page controller="NineProjects.AttachmentCtrl" >
+  
+ <apex:form >
+    <apex:actionFunction name="attachPdf" status="counterStatus" action="{!AttachPdf}" rerender="allPanel"/>
+    <apex:actionStatus startText=" Processing the invoice document " stopText=" Processing..." id="counterStatus" > <apex:facet name="start" >Processing...  </apex:facet> <apex:facet name="stop">   </apex:facet> </apex:actionStatus>
+ <script>
+   window.onload=function()
+   {
+     attachPdf();
+   };
+</script>
+
+</apex:form>  
+  
+
+</apex:page>

@@ -1,0 +1,13 @@
+.THIS.box {
+    width:1000px;
+    height:300px;
+    margin-left:50px;
+    margin-top:50px;
+    border:2px solid red;
+}
+.THIS.one{
+    padding:10px;
+    width:250px;
+    height:200px;
+    border:2px solid black;
+}

@@ -1,0 +1,12 @@
+<aura:component >
+    <aura:attribute name="empName" type="String" description="Employee Name" />
+    <aura:attribute name="salary" type="Decimal" required="true" />
+    <aura:attribute name="flag" type="Boolean" default="false" />
+    <!-- also Date,DateTime,Integer,Double,Long,Sobjects,List of all basic types-->
+    <div>
+    	<!-- {!v.attributename}-->
+        Employee Name : {!v.empName}<br/>
+        salary :		{!v.salary}<br/>
+        Employee active:{!v.flag}
+    </div>
+</aura:component>

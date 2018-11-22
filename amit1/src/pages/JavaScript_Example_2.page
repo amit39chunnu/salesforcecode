@@ -1,0 +1,18 @@
+<apex:page >
+    <script>
+    	function call(){
+        	alert('This is a click');
+        }
+    	function show(){
+        	alert('This is on change');
+        }
+    	function onMouse(){
+        	alert('This is mouse over');
+        }
+    </script>
+    <apex:form >
+        <apex:commandButton value="Click" onclick="call()" />
+        <apex:inputText onchange="show()" /> <br/>
+        <apex:commandButton value="Submit" onmouseover="onMouse()" />
+    </apex:form>
+</apex:page>

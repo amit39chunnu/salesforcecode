@@ -1,0 +1,22 @@
+<!--
+	1. values are always represented using formule expression
+		{! expression }
+-->
+<apex:page >
+    {! 10 }  <br/><br/>
+    {! 10+20 } <br/><br/>
+    {! 'sam' } <br/><br/>
+    {! ISNULL(10) } <br/> <br/> 
+    {! !ISNULL(10) } <br/><br/> 
+    {! ISBLANK('sam')}<br/><br/> 
+  <!--  
+    Global Data :Data which remains same throghout the application is called global data. <br/>
+    Global data will displayed using {! $GlobalObject.FieldName}  <br/><br/>
+    UserInfo ,System,Profile,UserRole ,user <br/><br/>  -->
+    Organization Name  :{! $Organization.Name} <br/><br/>
+    User First Name :{! $User.FirstName} <br/><br/>
+    User Last Name : {! $User.LastName}
+    
+    
+    
+</apex:page>

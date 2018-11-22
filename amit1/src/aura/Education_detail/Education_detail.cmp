@@ -1,0 +1,44 @@
+<aura:component implements="force:appHostable" controller="Education_detail" access="global">
+    <aura:attribute name="Education_detail" type="Education_detail__c" default="{ 'sobjectType': 'Education_detail__c'}"/>
+     
+    <div class="slds-grid">
+        <lightning:card title="Education Detail" footer="Click on Save button to create new Education Detail.">
+            <!-- Save button -->
+            <aura:set attribute="actions">
+                <lightning:button aura:id="saveId"
+                                  label="Save"   
+                                  onclick="{!c.doSave}"/>
+                <lightning:button aura:id="next2"
+                                  label="Next"   
+                                  onclick="{!c.next2}"/>
+            </aura:set>
+            <!--/ Save button -->
+            
+            <!-- Body -->
+            <p class="slds-p-horizontal_small">
+                <lightning:input aura:id="School_name"
+                                 label="Enter School Name"
+                                 type="String"                                 
+                                 value="{!v.Education_detail.School_Name__c}"/>
+                <lightning:input aura:id="mat_percentage"
+                                 label="Enter Matriculation Percentage"
+                                 type="number"
+                                 value="{!v.Education_detail.Matriculation_Percentage__c}"/>
+                <lightning:input aura:id="inter_percentage"
+                                 label="Enter Intermediate Percentage"
+                                 type="number"
+                                 value="{!v.Education_detail.Intermediate_Percentage__c}"/>
+                <lightning:input aura:id="colg_name"
+                                 label="Enter College Name"
+                                 type="String"
+                                 value="{!v.Education_detail.College_Name__c}"/>
+                <lightning:input aura:id="grad_percentage"
+                                 label="Enter Graduation Percentage"
+                                 type="number"
+                                 value="{!v.Education_detail.Graduation_Percentage__c}"/>
+            </p>
+            <!--/ Body -->
+        </lightning:card>
+    </div>
+    
+</aura:component>

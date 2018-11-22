@@ -1,0 +1,18 @@
+Dear {!Lead.OwnerFullName}, 
+
+There is an activity on the lead {!Lead.Name}.
+
+The activity details are as below : 
+
+Task : {!Task.Who} 
+
+Date : {!Task.ActivityDate}
+
+Comment :{!Task.Description}
+
+
+You can access the task using the following link : 
+{!Task.Link}
+
+Regards,
+{!Organization.Name}

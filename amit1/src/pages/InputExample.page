@@ -1,0 +1,44 @@
+<apex:page >
+    <apex:form >
+        <apex:pageblock title="Registration form">
+    		<apex:pageBlockSection >
+        		<apex:pageBlockSectionItem >
+                	<apex:outputLabel value="Name"/>
+                	<apex:inputText />
+            	</apex:pageBlockSectionItem>
+            		<apex:pageBlockSectionItem >
+                	<apex:outputLabel value="City"/>
+                	<apex:selectList size="1">
+                		<apex:selectOption itemLabel="-None-" itemvalue="none" />
+                    	<apex:selectOption itemLabel="Hyd" itemValue="Hyd" />
+                    	<apex:selectOption itemLabel="Ban" itemValue="Ban" />
+                    	<apex:selectOption itemLabel="Che" itemValue="Che" />
+                	</apex:selectList>
+            	</apex:pageBlockSectionItem>
+               	<apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Phone" />
+                    <apex:inputText />
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionitem >
+                    <apex:outputLabel value="Address"/>
+                    <apex:inputTextarea rows="3" cols="30"/>
+                </apex:pageBlockSectionitem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Gender"/>
+                    <apex:selectRadio >
+                        <apex:selectOption itemLabel="Male" itemValue="Male"/>
+                        <apex:selectOption itemLabel="Female" itemValue="Female"/>
+                    </apex:selectRadio>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Language"/>
+                    <apex:selectCheckboxes >
+                        <apex:selectOption itemLabel="Telegu" itemValue="Telegu"/>
+                        <apex:selectOption itemLabel="Hindi" itemValue="Hindi"/>
+                        <apex:selectOption itemLabel="English" itemValue="English"/>
+                    </apex:selectCheckboxes>
+                </apex:pageBlockSectionItem>
+        	</apex:pageBlockSection>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

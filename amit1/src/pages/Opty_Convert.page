@@ -1,0 +1,14 @@
+<apex:page standardController="Opportunity" extensions="Opty_Convert" recordSetVar="items">
+    <apex:form >
+    	<apex:pageBlock title="Opportunities">
+        	<apex:pageBlockButtons >
+                <apex:commandButton value="Convert" action="{!transfer}" />
+            </apex:pageBlockButtons>
+            <apex:pageBlockTable value="{!optyList}" var="a">
+                <apex:column value="{!a.name}" />
+                <apex:column value="{!a.stagename}" />
+                <apex:column value="{!a.closeDate}" />
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

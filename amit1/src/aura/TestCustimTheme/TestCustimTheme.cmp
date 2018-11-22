@@ -1,0 +1,25 @@
+<aura:component implements="forceCommunity:themeLayout" access="global" description="Sample Custom Theme Layout">
+    
+    <div style="width:80%; float:left;">
+        <div class="mainContentArea1" style="height:180px;">
+            {!v.body}
+        </div>
+        <div class="mainContentArea2" style="height:180px;">
+            Test
+        </div>
+		<div class="mainContentArea3" style="height:180px;">
+            Test
+        </div>
+        <div class="mainContentArea4" style="height:180px;">
+            Test
+        </div>
+    </div>
+	<div style="width:20%; float:left;">
+		<div class="mainContentArea5"  style="height:180px;">
+            Test
+        </div>
+        <div class="mainContentArea6" style="height:180px;">
+            Test
+        </div>
+	</div>
+</aura:component>

@@ -1,0 +1,31 @@
+<aura:component implements="forceCommunity:layout" description="Custom Content Layout" access="global">
+    <aura:attribute name="column1" type="Aura.Component[]" required="false"></aura:attribute>
+    <aura:attribute name="column2" type="Aura.Component[]" required="false"></aura:attribute>
+    <aura:attribute name="column3" type="Aura.Component[]" required="false"></aura:attribute>
+    <aura:attribute name="column4" type="Aura.Component[]" required="false"></aura:attribute>
+    <aura:attribute name="column5" type="Aura.Component[]" required="false"></aura:attribute>
+    <aura:attribute name="column6" type="Aura.Component[]" required="false"></aura:attribute>
+
+    <div style="width:80%; float:left;">
+        <div class="mainContentArea1" style="height:180px;">
+            {!v.column1}
+        </div>
+        <div class="mainContentArea2" style="height:180px;">
+            {!v.column2}
+        </div>
+		<div class="mainContentArea3" style="height:180px;">
+            {!v.column3}
+        </div>
+        <div class="mainContentArea4" style="height:180px;">
+            {!v.column4}
+        </div>
+    </div>
+	<div style="width:20%; float:left;">
+		<div class="mainContentArea5"  style="height:180px;">
+            {!v.column5}
+        </div>
+        <div class="mainContentArea6" style="height:180px;">
+            {!v.column6}
+        </div>
+	</div>
+</aura:component>

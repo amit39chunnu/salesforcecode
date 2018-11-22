@@ -1,0 +1,21 @@
+<apex:page controller="InputText_Example">
+    <apex:form >
+        Input Text: <apex:inputText /><br/><br/>
+        <!--what ever the valur we enter in this box will save to the name variable -->
+        Input value:<apex:inputText value="{!name}" /><br/><br/>
+        <!-- Maximum length of the input we can enter in the inputText is defined using maxlenght -->
+        Maxlength: <apex:inputText maxlength="5"/><br/><br/>
+        <!-- size : This will specify the size of the inputText box -->
+        Maxsize:<apex:inputText size="5"/><br/><br/>
+        <!--  disabled : This is a boolean value ,when set as true ,inputText will be diabled -->
+        Disabled:<apex:inputText disabled="true"/><br/><br/>
+        <!-- rendered  : This is a boolean value ,when set as false ,inputText will not be visable -->
+        Renderd : <apex:inputText rendered="false" /><br/><br/>
+        <!-- style : if you want to apply CSS Style we use style attribute -->
+        CSS Style:<apex:inputText style="background:yellow;color:red"/><br/><br/>
+        <!-- dir : This will specify the direction of the data in the inputText -->
+        Direction : <apex:inputText dir="RTL" />
+        <apex:commandButton value="call" action="{!call}"/>
+        {!result}
+    </apex:form>
+</apex:page>

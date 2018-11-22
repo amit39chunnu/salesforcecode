@@ -1,0 +1,21 @@
+Dear Approver,
+
+{!User.Name} has requested you Approval for the following Milestone :
+
+Name:  {!MileStone__c.Name}
+
+Amount:  {!MileStone__c.Amount__c}
+
+Delivery Date: {!MileStone__c.DeliveryDate__c}
+
+Project Name: {!MileStone__c.ProjectId__c}
+
+
+To approve or reject this milestone, click this link {!MileStone__c.Link} or reply to this mail with one of these words in the first line of the email message : APPROVE, APPROVED, YES, REJECT, REJECTED, NO
+
+
+If replying via email, you can also add comments on second line. Comments will be stored with the approval request in salesforce CRM.
+
+
+Regards,
+{!User.Name}

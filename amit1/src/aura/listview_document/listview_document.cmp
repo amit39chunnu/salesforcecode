@@ -1,0 +1,51 @@
+<aura:component controller="listview_document">
+    <aura:attribute name="mydocument" type="Document[]"/>
+    <aura:handler name="init" value="{!this}" action="{!c.invoke}"/>
+    <div class="slds-page-header">
+	<div class="slds-page-header__row">
+		<div class="slds-page-header__col-title">
+			<div class="slds-media">
+				<div class="slds-media__figure">
+					<span class="slds-icon_container slds-icon-standard-document" title="document">
+                        <lightning:icon iconName="action:approval"/>
+							<span class="slds-assistive-text">Document</span>
+						</span>
+					</div>
+					<div class="slds-media__body">
+						<div class="slds-page-header__name">
+							<div class="slds-page-header__name-title">
+								<h1>
+									<span class="slds-page-header__title slds-truncate" title="Document">Document</span>
+								</h1>
+							</div>
+						</div>
+						<p class="slds-page-header__name-meta">Choose Document</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    
+    
+    <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+	<thead>
+		<tr class="slds-line-height_reset">
+			<th class="slds-text-title_caps" scope="col">
+				<div class="slds-truncate" title="Document Name">Document Name</div>
+			</th>			
+		</tr>
+	</thead>
+	<tbody>
+        <aura:iteration items="{!v.mydocument}" var="a">
+		<tr class="slds-hint-parent">
+			
+			
+			<td data-label="Name">
+				<div class="slds-truncate" title="Name">{!a.Name}</div>
+			</td>
+			
+		</tr>
+        </aura:iteration>
+	</tbody>
+</table>
+</aura:component>

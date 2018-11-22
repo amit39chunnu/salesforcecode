@@ -1,0 +1,236 @@
+<apex:page >
+   <!--
+      username : dev@307.com
+      password : salesforce123
+
+        Visualforce: 
+1. Visualforce is a framework that allows developers to build sophisticated, 
+   custom user interfaces that can be hosted natively on the force.com platform.
+
+2. Visualforce  is tag based  programming .
+
+3. Visualforce  includes 
+    a. Visualforce markup
+    b. Visualforce controller
+
+4. Visualforce Markup : 
+    a. These contains the tags and scripting elements that are supported by browser.
+
+    b. visulaforce markup includes 
+        1. Visualforce tags 
+        2. Scripting elements 
+
+    c. Visualforce tags: 
+        These are predefined elements in the salesforce ,to support building rich user interfaces
+        Example : 
+        <apex:page >
+        <apex:pageBlock>
+        <apex:pageBlockSection>
+
+    d. Scripting Elements : 
+        These includes all the scripting languages which are supported by the browser.
+        Example : 
+        Html, javascript,Ajax,jquery,Angular,node.js,backbone.js.......
+
+
+5. Visualforce controller :(Server-Side Controllers) 
+    
+    a.These are used to specify what action should be performed when user interacts with
+      elements in UI .
+
+    b. Visualforce Controller are classified into 
+
+        1. StandardController 
+
+        2. Controllers 
+
+        3. Extentions 
+
+    
+    c. StandardControllers: 
+
+        If you want to perform same actions that are defined by salesforce on the objects in 
+        database ,then we use standardController.
+
+    d. Controller  : 
+        If you want to define your own logics then we use controllers ,
+        controllers are nothing but Apex classes
+
+    e. Extentions  :
+    
+        If you want to use some of the standard actions and define some of the custom 
+        actions we use extentions.
+
+
+
+6. Visualforce is used to 
+    
+    a. Overriding standard tabs 
+    b. Overriding standard buttons
+    c. Creating custom buttons and tabs 
+    d. Creating custom UI components 
+    e. Creating Custom side-bar components
+
+7. Version of Salesforce : 
+    Winter-18 Version 
+    API -42.0
+
+8. Apex classes will have .apxc
+   Visualforce pages will have .vfp
+
+
+9. How to create visualforce pages ??
+    
+    We can create VF pages in four ways 
+    1. Standard Navigation
+    2. Developer Console 
+    3. URL 
+    4. Eclipse or Any third party IDE 
+
+10. Standard Navigation :
+
+    Setup
+    |---Build
+         |--- Develop
+           |---Visualforce Pages 
+             |--- New 
+
+    Step 1: Enter Page Name 
+    Step 2: Enter Body 
+    Step 3: Save
+
+
+11. Developer Console  : 
+    
+    Setup
+    |--- User Name 
+        |---Developer Console 
+            |--- File 
+                  |--- New 
+                    |---Visualforce Page 
+                        
+
+    Step 1: Enter Page Name 
+    Step 2: Enter Body
+    Step 3: Save
+
+
+12.  Create VF page using URL 
+
+    1.Enable Development Mode 
+
+        UserName
+        |---My Settings 
+             |--- Personal
+               |--- Advanced User Details
+                 |---Edit 
+                      |---Enable Development Mode 
+
+    
+    2. https://serverinstance.salesforce.com /apex/PageName 
+
+       https://ap5.salesforce.com/apex/Example
+
+       Loggedin :  /apex/Example
+
+13. Creating a VF page using eclipse 
+
+===================================================================================
+
+1. Component : 
+    <namespace:componentName attribute="value" attribute="Value2" >
+
+2. Every element in the VF Page should obey strict xml format
+
+    1. every element should have corresponding closing element 
+        
+        <Name >
+        </Name>
+
+        <apex:page>
+        </apex:page>
+
+        <apex:pageBlock>
+        </apex:pageBlock>
+
+        <Name    /> 
+        <apex:inputText  />
+        <apex:sectionHeader />
+
+     2. All the elements should be nested properly .
+
+        <Name>
+            <LastName> Myla</LastName>
+            <FirstName>Satish</FirstName>
+        </Name>
+        
+        inner elements should be closed first then outer elements 
+
+
+     3. It should obey case sensitiveness 
+
+        <Name> 
+        </Name>
+
+        <name
+        </name>
+
+        <Name>  Satish</name> ----Error
+
+
+     4. All the VF pages should start and end with <apex:page>
+==================================================================================
+Frequently used VF components 
+
+1. <apex:page>
+2. <apex:sectionHeader>
+3. <apex:form>
+4. <apex:pageBlock>
+5. <apex:pageBlockSection>
+6. <apex:pageBlockSectionItem>
+7. <apex:pageBlockButtons>
+8. <apex:commandButton>
+9. <apex:commandLink>
+10.<apex:facet>
+11. <apex:param>
+12. <apex:pageBlockTable>
+13. <apex:dataTable>
+14. <apex:repeat>
+15. <apex:dataList>
+16. <apex:column>
+17. <apex:inputText >
+18. <apex:inputHidden>
+19. <apex:inputSecret>
+20. <apex:inputCheckbox />
+21. <apex:inputTextArea>
+22. <apex:inputFile>
+23. <apex:inputField>
+24. <apex:outputLabel >
+25. <apex:outputField>
+26. <apex:outputText >
+27. <apex:include>
+28. <apex:insert>
+29. <apex:tab>
+30. <apex:tabPanel>
+31. <apex:panelGrid>
+32. <apex:panelGroup>
+33. <apex:selectOption>
+34. <apex:selectList>
+35. <apex:selectOptions>
+36. <Apex:selectRadioButtons>
+37. <apex:selectCheckboxs>
+38. <apex:insert>
+39. <apex:outputPabel>
+40. <apex:pageMessages />
+41. <apex:actionSupport>
+42. <apex:actionPooler>
+43. <Apex:actionFunction>
+44. <apex:actionRegion>
+45. <apex:actionStatus>
+46. <apex:actionRegion>
+47. <apex:component>
+48. <apex:attribute>
+49. <apex:remoteAction>
+50. <apex:inlineEditSuppor>
+-->
+</apex:page>

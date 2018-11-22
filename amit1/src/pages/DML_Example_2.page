@@ -1,0 +1,26 @@
+<apex:page controller="DML_Example_2">
+    <apex:sectionHeader title="Account" subtitle="New Account" />
+    <apex:form >
+    	<apex:pageBlock title="Account-Contact">
+        	<apex:pageBlockButtons location="top">
+                <apex:commandButton value="Create" action="{!create}" />
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection title="Account" collapsible="true">
+                <apex:inputfield value="{!acc.name}" />
+                 <apex:inputfield value="{!acc.industry}" />
+                 <apex:inputfield value="{!acc.phone}" />
+                 <apex:inputfield value="{!acc.type}" />
+            </apex:pageBlockSection>
+             <apex:pageBlockSection title="Contact" collapsible="false">
+                <apex:inputfield value="{!con.lastname}" />
+                 <apex:inputfield value="{!con.firstname}" />
+                 <apex:inputfield value="{!con.phone}" />
+                 <apex:inputfield value="{!con.email}" />
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="Files" collapsible="false">
+                <apex:inputText value="{!name}" />
+                <apex:inputFile fileName="Testing" value="{!body}" />
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

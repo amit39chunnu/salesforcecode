@@ -1,0 +1,11 @@
+<apex:page controller="Message_Example">
+    <apex:form id="one">
+        <apex:pageMessages />
+    	<apex:pageBlock title="Message">
+        	<apex:pageBlockButtons location="top">
+                <apex:commandButton value="Call" action="{!login}" reRender="one"/>
+            </apex:pageBlockButtons>
+            Enter Name :<apex:inputText value="{!name}" />
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

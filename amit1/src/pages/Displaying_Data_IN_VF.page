@@ -1,0 +1,11 @@
+<apex:page >
+    <!--
+    1. We can display the data in the vF page from different source 
+		2. Every value should be in formule expression
+		3. Source : Expression
+				  : GlobalData
+				  : Apex Class 
+				  : Sobject
+				  : URL 
+	-->
+</apex:page>

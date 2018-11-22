@@ -1,0 +1,18 @@
+<apex:page controller="Pagination_Example">
+    <apex:form >
+    	<apex:pageBlock title="Opporutity">
+        	<apex:pageBlockButtons location="bottom">
+                <apex:commandButton value="First"  action="{!controller.first}" rendered="{! controller.hasPrevious}"/>
+                <apex:commandButton value="Previous" action="{!controller.previous}" rendered="{!controller.hasPrevious}"/>
+                <apex:commandButton value="Next" action="{!controller.next}"  rendered="{!controller.hasNext}" />
+                <apex:commandButton value="Last"  action="{!controller.last}" rendered="{!controller.hasNext}"/>
+            </apex:pageBlockButtons>
+          	<apex:pageBlockTable value="{!opty}" var="a">
+                <apex:column value="{!a.name}" />
+                <apex:column value="{!a.stagename}" />
+                <apex:column value="{!a.closeDate}" />
+            </apex:pageBlockTable>
+            <apex:outputLabel value="{!controller.pageNumber} of {! controller.resultsize/5}" />
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

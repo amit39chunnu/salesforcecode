@@ -1,0 +1,23 @@
+<apex:page controller="SOQL_Example_4">
+    <apex:form >
+    	<apex:selectList size="1" value="{!fldSelected}">
+            <apex:selectOptions value="{!options}" />
+        </apex:selectList>
+         &nbsp;  &nbsp;  &nbsp;  &nbsp; 
+        <apex:selectList size="1" value="{!optSelected}">
+            <apex:selectOptions value="{!operators}" />
+        </apex:selectList>
+         &nbsp;  &nbsp;  &nbsp;  &nbsp;
+        <apex:inputText value="{!value}" />
+        <apex:commandButton value="Query" action="{!search}" reRender="one" />
+        <br/><br/><br/>
+        <apex:pageBlock id="one" mode="mainDetail">
+        	<apex:pageBlockTable value="{!accounts}" var="a" rendered="{! !ISNULL(accounts)}">
+                <apex:column value="{!a.name}" />
+                <apex:column value="{!a.industry}" />
+                <apex:column value="{!a.phone}" />
+                <apex:column value="{!a.rating}" />
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

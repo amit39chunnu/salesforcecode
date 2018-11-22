@@ -1,0 +1,47 @@
+<!-- Comments -->
+<!--
+	<apex:page > 
+	1. Every VF page should start and end with <apex:page > component
+	2. Attributes : 
+		a. apiVersion 	: 
+			1. it will specify version of api we are using in the VF Page .
+			2. If you dont mention any api version ,by default latest version will be applied.
+			3. If you want to reffer to any old version of api then 
+				apiversion="42.0" 
+
+		b. Id			:
+			1. It is a unique name given to the element in the page 
+			2. Using this name we can reffer to element in page 
+
+		c. showHeader 	:
+			1. It is a boolean value .
+			2. When it is set as true,salesforce standardheader and sidebar components will be displayed.
+			3. Default value is true
+
+		d. sidebar		:
+			1. It is a boolean value.
+			2. When it is set as true ,salesforce standard siderbar components will be displayed .
+			3. Default value is true.
+
+		e. rendered     : 
+			1. It is a boolean value .
+			2. When it is set as true ,content of the component will be displayed 
+			3. When set as false ,content of the component will be hidden
+			4. By Default value is true
+
+		g. renderAs     : 
+			1. if you want content of the page to be dislayed in pdf format ,then we use 
+				renderAs pdf
+
+		h .contentType  : 
+			1. This will specify how the content of the page should be rendered 
+			2. vnd.format#filename.extention
+			word : 
+				vnd.msword#myfile.doc
+			excel :
+				vnd.ms-excel#myfile.xls
+-->
+<apex:page >
+  This is line one 
+  This is line two
+</apex:page>

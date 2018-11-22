@@ -1,0 +1,5 @@
+<aura:component >
+    <aura:attribute name="name"	type="String"/>
+    <lightning:button label="Show" onclick="{!c.invoke}" />
+    {!v.name}
+</aura:component>

@@ -1,0 +1,44 @@
+<aura:component implements="force:appHostable" controller="Contact_info" access="global">
+    <aura:attribute name="contact_info" type="Contact__c" default="{ 'sobjectType': 'Contact__c'}"/>
+     
+    <div class="slds-grid">
+        <lightning:card title="Contact Information" footer="Click on Save button to create new Contact.">
+            <!-- Save button -->
+            <aura:set attribute="actions">
+                <lightning:button aura:id="saveId"
+                                  label="Save"   
+                                  onclick="{!c.doSave}"/>
+                <lightning:button aura:id="Next1"
+                                  label="Next"   
+                                  onclick="{!c.Next1}"/>
+            </aura:set>
+            <!--/ Save button -->
+            
+            <!-- Body -->
+            <p class="slds-p-horizontal_small">
+                <lightning:input aura:id="name"
+                                 label="Enter Name"
+                                 type="String"
+                                 required="true"
+                                 value="{!v.contact_info.Name}"/>
+                <lightning:input aura:id="phone"
+                                 label="Enter Phone"
+                                 type="number"
+                                 value="{!v.contact_info.Phone__c}"/>
+                <lightning:input aura:id="email"
+                                 label="Enter Email"
+                                 type="email"
+                                 value="{!v.contact_info.Email__c}"/>
+                <lightning:input aura:id="dob"
+                                 label="Enter DOB"
+                                 type="date"
+                                 value="{!v.contact_info.DOB__c}"/>
+                <ui:outputText class="result" aura:id="multiResult" value="{!v.contact_info.Language_known__c}" />
+                
+
+            </p>
+            <!--/ Body -->
+        </lightning:card>
+    </div>
+    
+</aura:component>

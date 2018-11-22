@@ -1,0 +1,12 @@
+<aura:component >
+	<aura:attribute name="name" type="String" required="true" />
+    <aura:attribute name="colgname" type="String" default="SKIT" />
+    <aura:attribute name="year" type="String" />
+    <aura:attribute name="marks" type="Integer[]" default="10,20,30,40"/>
+    <div>
+        Name:			{!v.name}<br/>
+        College Name:	{!v.colgname}<br/>
+        year:			{!v.year}<br/>
+        Marks:			{!v.marks}
+    </div>
+</aura:component>

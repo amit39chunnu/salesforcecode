@@ -1,0 +1,23 @@
+Dear {!Lead.OwnerFullName},
+
+You have a new lead {!Lead.Name}. Lead details are as below :
+
+Name  : {!Lead.Name}
+
+Date    :  {!Lead.Date__c}
+
+Assign Person : {!Lead.OwnerFullName} 
+
+Status : {!Lead.Status}
+
+Phone :  {!Lead.Phone}
+
+Mobile : {!Lead.MobilePhone}
+
+Client Email : {!Lead.Email}
+
+
+You can access the lead using following link :  {!Lead.Link}
+
+Regards,
+{!Organization.Name}

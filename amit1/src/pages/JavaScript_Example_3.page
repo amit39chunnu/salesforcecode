@@ -1,0 +1,12 @@
+<apex:page controller="Javascript_3">
+    <script>
+    	function call(myValue){
+        	alert('My Value :'+myValue);
+        }
+    </script>
+    <apex:form >
+        <apex:commandButton value="Submit" onclick="call('satish')" /> 
+        <apex:commandButton value="Cancel" onclick="call('{! $Organization.name}')" />
+        <apex:commandButton value="Reset"  onclick="call('{!name}')" />
+    </apex:form>
+</apex:page>

@@ -1,0 +1,26 @@
+<apex:page controller="JSON_Serialize_Example_1">
+    JSONFormat : <br/><br/>
+    ======================================================
+    <br/><br/>
+    Integer : {!integerResult} <br/><br/>
+    String :{!stringResult} <br/><br/>
+    Date  :{!dateResult} <br/><br/>
+    Blob  :{!blobResult} <br/><br/>
+    Account:{!accResult} <br/><br/>
+    Student:{!studResult}<br/><br/>
+    =======================================================<br/><br/>
+     JSON Pretty Print Format : <br/><br/>
+    ======================================================<br/><br/>
+    Integer : {!integerResult1} <br/><br/>
+    String :{!stringResult1} <br/><br/>
+    Date  :{!dateResult1} <br/><br/>
+    Blob  :{!blobResult1} <br/><br/>
+    Account:{!accResult1} <br/><br/>
+    Student:{!studResult1}<br/><br/>
+    ========================================<br/><br/>
+    Suppress Null Values <br/><br/>
+    =========================================<br/><br/>
+    Student :{!stdResult2} <br/><br/>
+    Student :{!stdResult3}<br/><br/>
+    
+</apex:page>

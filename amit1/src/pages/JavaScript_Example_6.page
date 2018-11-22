@@ -1,0 +1,18 @@
+<apex:page id="page">
+    <apex:form id="fm">
+    	<apex:pageBlock title="Example" id="pb">
+        <script>
+    		function show(){
+        		var name=document.getElementById('{! $Component.pbs.pbsi.name}').value;
+                alert(name);
+        	}
+    </script>
+        	<apex:pageBlockSection id="pbs">
+            	<apex:pageBlockSectionItem id="pbsi">
+                    <apex:outputLabel value="Enter Name" />
+                    <apex:inputText id="name" onchange="show()" />
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

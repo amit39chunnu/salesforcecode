@@ -1,0 +1,20 @@
+<!--
+1. If you want to use apex class in the VF page 
+	a.Apex class should be public or global 
+	b.Apex class should contain the constructor without parameters 
+    c.Datamembers of the class which you want to use in the VF page should be public /global
+	d.Every variable should have getter and setter method
+	e. if you want to use apex class in the VF page then we should define apex class as Controller in the vF page
+
+2. order of execution of VF page 
+	a. First constructor of the controller class will run 
+	b. Action method will be invoked 
+	c. Getter method will be called 
+	d. Page will be loaded 
+-->
+
+<apex:page controller="Apex_Example_1">
+    Name  : {! name} <br/><br/>
+    Age   :{!age}  <br/><br/>
+    Branch:{!branch} <!-- getBranch method will be called -->
+</apex:page>

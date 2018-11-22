@@ -1,0 +1,17 @@
+Dear Requestor,
+
+The approval request  for Milestone {!MileStone__c.Name} is rejected. Milestone details are as below  :
+
+Name : {!MileStone__c.Name}
+
+Amount : {!MileStone__c.Amount__c}
+
+Delivery Date : {!MileStone__c.DeliveryDate__c}
+
+Project Name : {!MileStone__c.ProjectId__c}
+
+
+You can access the milestone record using following link : {!MileStone__c.Link} 
+
+Regards, 
+{!Organization.Name}

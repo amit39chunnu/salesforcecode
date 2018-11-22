@@ -1,0 +1,25 @@
+<!--
+	Sobject:  Any object created in the salesforce data is reffered as sobject in apex programming 
+		   : Sobject can be a standard object or Custom object
+	
+	1. If you want to reffer to standard properties of any sobject in the VF page then 
+	   define that sobject as standardController
+		standardController="Account"
+		standardController="Contact"
+	2. if you want to reffer to custom object then we use 
+		 standardController="Customer__c" 
+
+	3. 	Object 				Field
+		Standard			StandardField 		{! StandardObject.StandardField} 	 {! Account.Name}
+
+		StandardObject		Custom Field 		{! StandardObject.CustomField__c}	 {! Account.MyCity__c}	
+
+		Custom Object 		StandardField		{! CustomObject__c.StandardField}	 {! Customer__c.Name} 
+
+		Custom Object 		CustomField 		{! CustomObject__c.CustomField__c}	 {! Customer__c.FirstName__c}
+
+-->
+<apex:page standardController="Account">
+    Name  : {! Account.Name}  <br/><br/>
+    Industry:{! Account.Industry} 
+</apex:page>

@@ -1,0 +1,29 @@
+<apex:page controller="PBSectionItem_Example">
+    <apex:sectionHeader title="Calculator" subtitle="Example" help="/apex/page"/>
+    <apex:form id="pb">
+        <apex:pageMessages />
+        
+    	<apex:pageBlock title="calculator">
+            <apex:pageBlockButtons location="top">
+                <apex:commandButton value="Add" action="{!add}" reRender="pb"/>
+                <apex:commandButton value="Mul" action="{!mul}" reRender="pb"/>
+                <apex:commandButton value="reset" action="{!reset}" rerender="pb"/>
+            </apex:pageBlockButtons>
+            
+      		<apex:pageBlockSection columns="1">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Aval"/>
+                        <apex:inputText value="{!aval}" />
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Bval"/>
+                    <apex:inputText value="{!bval}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Result"/>
+                    <apex:inputText value="{!cval}"/>
+                </apex:pageBlockSectionItem>                
+            </apex:pageBlockSection>
+    	</apex:pageBlock>
+    </apex:form>
+</apex:page>

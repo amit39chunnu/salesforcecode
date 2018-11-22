@@ -1,0 +1,21 @@
+<apex:page controller="SOQL_Example_1">
+    <apex:form >
+    	<apex:pageBlock title="Accounts" id="pb">
+            <apex:pageBlockButtons location="top">
+                <apex:commandButton value="LimitFive" action="{!limitFive}" reRender="pb" />
+                <apex:commandButton value="LimitSize" action="{!limitSize}" reRender="pb"/>
+                <apex:commandButton value="OffsetTen" action="{!offsetTen}" reRender="pb" />
+                <apex:commandButton value="OffsetSize" action="{!offsetSize}" reRender="pb"/>
+                <apex:commandButton value="limit5Offset5" action="{!limit5Offset5}" reRender="pb" />
+                <apex:commandButton value="limitOffsetSize" action="{!limitOffsetSize}" reRender="pb"/>
+            </apex:pageBlockButtons>
+        	<apex:pageBlockTable value="{!accounts}" var="a">
+                <apex:column value="{!a.name}" />
+                <apex:column value="{!a.industry}" />
+                <apex:column value="{!a.rating}" />
+                <apex:column value="{!a.phone}" />
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    	
+    </apex:form>
+</apex:page>

@@ -1,0 +1,57 @@
+<!--
+<apex:pageBlock> :
+1. This component is used to create a block on the page .
+2. We can create number of pageblocks in the page.
+3. Attributes 
+	a. title  : 
+		1. It is a text value printed on the header of the block
+
+	b. helpTitle :
+		1. It is a text value ,printed on the right corner of the pageblock as link
+
+	c. helpURL	:
+		1. It is a url of the page 
+		2. When we click on the helpTitle ,which page should be opened is defined using helpURL
+
+	d. dir 		: 
+		1. It will specify direction 
+		2. Possible values are RTL (Right to Left )  ,LTR ( Left to Right)
+		
+	e. rendered  :
+		1. It is a boolean value 
+		2. When set as false ,content of the component will be hidden 
+		3. Default value is true 
+
+	f. mode		:
+		1. It will specify the mode the page 
+		2. Possible values are EDIT,Detail,MainDetail
+
+	g. tabStyle  :
+		1. It will take name of the sobject whoes tab style should be applied on the pageBlock
+-->
+<apex:page >
+    <apex:pageBlock title="Pageblock1">
+        This is example1<br/>
+        This is example2
+    </apex:pageBlock>
+    <apex:pageBlock title="Pageblock2" helpTitle="need Help??" helpUrl="/apex/page">
+        This is example3<br/>
+        This is example4
+    </apex:pageBlock>
+    <apex:pageBlock title="Pageblock3" dir="RTL">
+        This is example5<br/>
+        This is example4
+    </apex:pageBlock>
+    <apex:pageBlock title="Pageblock4" rendered="false">
+        This is example7<br/>
+        This is example8
+    </apex:pageBlock>
+    <apex:pageBlock title="Pageblock5" mode="edit">
+        This is example9<br/>
+        This is example10
+    </apex:pageBlock>
+    <apex:pageBlock tabStyle="Lead">
+        This is example11<br/>
+        This is example12
+    </apex:pageBlock>
+</apex:page>

@@ -1,0 +1,21 @@
+<!--
+<apex:outputLabel> : 
+1. This component is used to create lable on the page .
+2. Attributes 
+	a. value : This is a text value ,which will be displayed as label on the page
+	b. rendered : 
+		1. it is a boolean value
+		2. when set as true ,it will be displayed 
+
+-->
+<apex:page controller="OutputLabel_Exmple">
+    <apex:form >
+        Enter Name: <br/>
+        <apex:outputLabel value="Enter Age" /> <br/>
+        <apex:outputLabel value="{!label}"/> <br/>
+        <apex:outputLabel value="{!label1}" /><br/>
+        <apex:outputLabel rendered="false" >{!label}</apex:outputLabel><br/>
+        <apex:commandButton value="Call" action="{!call}" />
+        
+    </apex:form>
+</apex:page>

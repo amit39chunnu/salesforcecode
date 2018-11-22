@@ -1,0 +1,44 @@
+<!--
+	<apex:commandButton> 
+	1. This component is used to create a button on the page.
+	2. This is a child component of <apex:form>
+	3. Attributes :
+		a. Value  : 
+			1. it is a text value 
+			2. This will be displayed as a label on the button
+
+		b. action  : 
+			1. When we click on the button ,what action should be performed is defined 
+			2. action can be url of the page, which you want to open
+			3. action can be a method from the apex class 
+			Note : if you are calling  a method from apex class ,method should not contain any parameters 
+			{! methodName }
+
+		c. disabled : 
+			1. It is a boolean value .
+			2. When set as true ,button will be disabled 
+			3. default value is false 
+
+		d. rendered  : 
+			1. it is a boolean value .
+			2. When set as false ,Button will be hidden
+			3. Default value true
+
+		e. Style 	:
+			1. It is used to specify css for a component.
+
+		f. dir 		: 
+			1. This will specify the direction of the button 
+			2. Possible values are RTL ( Right to Left ) LTR(Left to Right)
+-->
+<apex:page controller="Button_Example">
+    <apex:form >
+        <apex:commandButton value="Submit"/>
+        <apex:commandButton value="Cancel" action="/apex/page"/>
+        <apex:commandButton value="Invoke" action="{!show}"/> {!empName}
+        <apex:commandButton value="Reset" disabled="true" />
+        <apex:commandButton value="Rendered" rendered="false"/>
+        <apex:commandButton value="Style" style="background:yellow;color:red;width:200px"/>
+        <apex:commandButton value="cancel" style="width:200px;color:red" dir="RTL"/>
+    </apex:form>
+</apex:page>

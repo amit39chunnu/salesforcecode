@@ -1,0 +1,5 @@
+<aura:component >
+	<c:component_one></c:component_one>
+    <c:component_two></c:component_two>
+    This is data from component three
+</aura:component>
